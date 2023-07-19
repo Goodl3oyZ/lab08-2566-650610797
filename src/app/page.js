@@ -1,51 +1,33 @@
+import { Header } from "../../Components/Header";
+import { Taskinput } from "../../Components/Taskinput";
+import { Task } from "../../Components/Task";
+import { Footer } from "../../Components/Footer";
+
 export default function Home() {
   return (
     // Main container
     <div className="container mx-auto">
       {/* header section */}
-      <div>
-        <h4 className="display-4 fst-italic text-center">Todo List Mock Up</h4>
-        <p className="text-secondary text-center">
-          This lab teach you how to split react component(s)
-        </p>
-      </div>
+      <Header></Header>
 
       {/* tasks container */}
       <div style={{ maxWidth: "400px" }} className="mx-auto">
         {/* task input */}
-        <div className="d-flex gap-1">
-          <input
-            className="form-control"
-            placeholder="Insert a task here.."
-          ></input>
-          <button className="btn btn-primary">Add</button>
-        </div>
+        <Taskinput />
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Read a book</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        <Task title="Read a book" />
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Take a shower</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        <Task title="Take a shower" />
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Sleep</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        <Task title="Sleep" />
       </div>
 
       {/* //footer section */}
-      <div className="mt-3">
-        <p className="text-secondary text-center">
-          copyright © 2023 Phanudet Sueaphueak 650610797
-        </p>
-      </div>
+      <Footer
+        year="2023"
+        fullName="Phanudet Sueaphueak"
+        studentId="650610797"
+      />
     </div>
   );
 }
